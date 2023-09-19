@@ -1,0 +1,209 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <ul class="navbar-nav custom-navbar-nav">
+        <li class="nav-item">
+          <button class="btn btn-light" style="margin-right: 10px">
+            Find a Mentor
+          </button>
+        </li>
+  
+        <li class="nav-item">
+          <button class="btn btn-light" style="margin-right: 50px">
+            Book a Session
+          </button>
+        </li>
+  
+        <li class="nav-item">
+          <button class="btn btn-light" (click)="viewMentor()">View Profile</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <form [formGroup]="registerForm" class="p-3 rounded-3 mb-3" >
+    <div class="row g-0">
+      <div class="col text-center p-2 mb-3 bg-light">
+        <span class="fs-3">Delete Your Account</span>
+      </div>
+      
+
+      <!-- <div class="row">
+      <div class="col text-center mb-3">
+        <div class="circular-frame">
+          <img
+            [src]="'data:image/jpeg;base64,' + mentor.profileImage"
+            alt="Mentor Profile Image"
+          />
+        </div>
+      </div>
+       </div>  -->
+      
+      <div class="row">
+        <div class="col mb-3">
+          <label for="firstName" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control readonly-bg"
+            id="firstName"
+            formControlName="firstName"
+            [readOnly]="true"
+          />        
+        </div>
+        <div class="col mb-3">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input
+            type="text"
+            class="form-control readonly-bg"
+            id="lastName"
+            formControlName="lastName"
+            [readOnly]="true"
+          />
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="employeeId" class="form-label">Employee Id</label>
+          <input
+            type="text"
+            class="form-control readonly-bg"
+            id="employeeId"
+            formControlName="employeeId"
+            [readOnly]="true"
+          />
+          
+        </div>
+        <div class="col mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control readonly-bg"
+            id="email"
+            formControlName="email" 
+            [readOnly]="true"
+            />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            class="form-control readonly-bg"
+            id="location"
+            formControlName="location"
+            [readOnly]="true"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="jobTitle" class="form-label">Job Title</label>
+          <input
+            type="text"
+            class="form-control readonly-bg"
+            id="jobTitle"
+            formControlName="jobTitle"
+            [readOnly]="true"
+          />
+         
+        </div>
+        <div class="col mb-3">
+          <label for="company" class="form-label">Company</label>
+          <input
+            type="text"
+            class="form-control readonly-bg"
+            id="company"
+            formControlName="company"
+            [readOnly]="true"
+          />
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="bio" class="form-label">Bio</label>
+          <textarea
+            class="form-control readonly-bg"
+            id="bio"
+            rows="4"
+            formControlName="bio"
+            [readOnly]="true"
+          ></textarea>
+          <div
+            class="form-text text-danger"
+            *ngIf="bio.errors?.['required'] && (bio.touched || bio.dirty)"
+          >
+            Bio is required
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="category" class="form-label">Category</label>
+          <input
+            type="text"
+            class="form-control readonly-bg"
+            id="category"
+            formControlName="category"
+            [readOnly]="true"
+          />
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="skills" class="form-label">Skills</label>
+          <input
+          type="text"
+          class="form-control readonly-bg"
+          id="skills"
+          formControlName="skills"
+          [readOnly]="true"
+        />
+          <!-- <ng-multiselect-dropdown
+            [placeholder]="'Select skills'"
+            [data]="allSkills"
+            [settings]="dropdownSettings"
+            (onSelect)="onSkillSelect($event)"
+            (onDeSelect)="onSkillDeSelect($event)"
+            (onDeSelectAll)="onDeSelectAllSkills($event)"
+            (onSelectAll)="onSelectAllSkills($event)"
+          >
+          </ng-multiselect-dropdown> -->
+  
+          <!-- <select class="form-select form-select-lg mb-3 selectpicker" id="skillsDropdown" multiple="multiple" formControlName="skills">
+                      <option value="" disabled selected>Select skills</option>
+                      <option *ngFor="let skill of allSkills" [value]="skill.skill">{{ skill.skill }}</option>
+                      </select> -->
+        </div>
+      </div>
+    </div>
+  </form>
+
+  
+  <div class="container-fluid custom-A rounded pb-2 border border-dark">  
+
+    
+    <p> Close your account</p>
+
+    <p>Once you delete your account,there's no going back. Please be certain!</p>
+
+    <button type="button" class="btn btn-primary" 
+    style="background-color:rgb(235, 38, 38);color:white;width:150px;height:40px;"
+    (click)="deleteMentor()"
+    >Delete Account</button> &nbsp;
+
+  </div>
+  
+  <br><br>
+  <!-- Footer -->
+  
+  <footer class="navbar custom-footer">
+    <div class="container d-flex justify-content-center align-items-center">
+      <p class="text-black mb-0">&copy; 2023 All Rights Reserved</p>
+    </div>
+  </footer>
+  

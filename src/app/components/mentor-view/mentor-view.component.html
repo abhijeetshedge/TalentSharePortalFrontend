@@ -1,0 +1,129 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="btn btn-light" routerLink="/home">Home</button>
+      </li>
+    </ul>
+    <ul class="navbar-nav custom-navbar-nav">
+      <li class="nav-item">
+        <button class="btn btn-light" (click)="logoutUser()">Log Out</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<form [formGroup]="registerForm" class="p-3 rounded-3 mb-3">
+  <div class="row g-0">
+    <div class="row ">
+      <div class="cust-button">
+        <button type="button" class="btn btn-primary update-button" (click)="updateMentor()">Update Details</button>
+        <button type="button" class="btn btn-primary delete-button" (click)="deleteMentor()">Delete Account</button>
+      </div>
+    </div>
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Mentor Details</span>
+    </div>
+
+
+    <!-- <div class="row">
+      <div class="col text-center mb-3">
+        <div class="circular-frame">
+          <img
+            [src]="'data:image/jpeg;base64,' + mentor.profileImage"
+            alt="Mentor Profile Image"
+          />
+        </div>
+      </div>
+       </div>  -->
+
+    <div class="row">
+      <div class="col mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control readonly-bg" id="firstName" formControlName="firstName"
+          [readOnly]="true" />
+      </div>
+      <div class="col mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control readonly-bg" id="lastName" formControlName="lastName"
+          [readOnly]="true" />
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="employeeId" class="form-label">Employee Id</label>
+        <input type="text" class="form-control readonly-bg" id="employeeId" formControlName="employeeId"
+          [readOnly]="true" />
+
+      </div>
+      <div class="col mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control readonly-bg" id="email" formControlName="email" [readOnly]="true" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control readonly-bg" id="location" formControlName="location"
+          [readOnly]="true" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="jobTitle" class="form-label">Job Title</label>
+        <input type="text" class="form-control readonly-bg" id="jobTitle" formControlName="jobTitle"
+          [readOnly]="true" />
+
+      </div>
+      <div class="col mb-3">
+        <label for="company" class="form-label">Company</label>
+        <input type="text" class="form-control readonly-bg" id="company" formControlName="company" [readOnly]="true" />
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="bio" class="form-label">Bio</label>
+        <textarea class="form-control readonly-bg" id="bio" rows="4" formControlName="bio" [readOnly]="true"></textarea>
+        <div class="form-text text-danger" *ngIf="bio.errors?.['required'] && (bio.touched || bio.dirty)">
+          Bio is required
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input type="text" class="form-control readonly-bg" id="category" formControlName="category"
+          [readOnly]="true" />
+        <!-- <select
+            class="form-select form-select-lg mb-3"
+            formControlName="category"
+          >
+            <option value="" disabled selected>Select a category</option>
+            <option *ngFor="let cat of allCategories" [value]="cat.category">
+              {{ cat.category }}
+            </option>
+          </select> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="skills" class="form-label">Skills</label>
+        <input type="text" class="form-control readonly-bg" id="skills" formControlName="skills" [readOnly]="true" />
+      </div>
+    </div>
+
+  </div>
+</form>
+
+<br><br>
+<!-- Footer -->
+
+<footer class="navbar custom-footer">
+  <div class="container d-flex justify-content-center align-items-center">
+    <p class="text-black mb-0">&copy; 2023 All Rights Reserved</p>
+  </div>
+</footer>

@@ -1,0 +1,37 @@
+/* form{
+    width: 500px;
+} */
+
+:host {
+    display: block;
+    height: 100vh;
+  }
+
+  /* .container {
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.custom-navbar {
+  background-color: #7bc7fd;
+}
+
+.custom-navbar-nav{
+  margin-left: auto;
+}
+
+
+
+.btn.btn-light:hover {
+  background-color: rgb(155, 187, 238) ; /* Change the background color as needed */
+}
+
+.custom-footer{
+  background-color: #cfe2ff;
+}
+
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+

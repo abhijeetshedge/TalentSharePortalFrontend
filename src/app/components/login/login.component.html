@@ -1,0 +1,49 @@
+<nav class="navbar navbar-light" style="background-color: #7bc7fd; height: 50px;">
+  <div class="d-flex justify-content-center align-items-center w-100">
+      <div class="ms-auto me-3"> <!-- Use ms-auto to push the button to the right -->
+          <a href="home">
+              <button class="btn btn-sm btn-light btn-block" style="width: 100px;">Home</button>
+          </a>
+      </div>
+  </div>
+</nav>
+<div class="div1">
+  <div class="d-flex flex-wrap align-items-center justify-content-center">
+    <span class="btn-signin mb-2 mb-md-0 mr-md-2">Don't have an account yet?</span>
+    <button type="button" (click)="signUp()" class="btn btn-outline-primary ml-md-2" id="signUp">Sign Up</button>
+  </div>
+</div>
+<div class="container mt-5">
+        <div class="col-md-6">      
+                <h1 class="heading-1 mb-8">Login</h1>
+                </div>
+                <div class="col-md-2"> 
+                    <div class="row">
+                      <div class="col">
+                <button type="button" class="btn btn-outline-primary ml-2" routerLink="mentee-login" routerLinkActive="active">Mentee</button>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-primary ml-2"  routerLink="mentor-login" routerLinkActive="active">Mentor</button>
+                      </div>
+                    </div>
+                  </div>&nbsp;&nbsp;&nbsp;
+                  <div class="col-md-6">
+                    <router-outlet></router-outlet>
+                  </div>
+</div>
+<footer>
+<div class="mt-2">
+  <nav class="navbar navbar-light fixed-bottom" style="background-color: #7bc7fd; height: 40px;">
+    <div class="d-flex justify-content-center align-items-center w-100 ">
+      <p class="text-black mb-0"> &copy; 2023 All Rights Reserved</p>
+    </div>
+  </nav>
+</div>
+</footer>
+
+<!-- <footer class="navbar custom-footer">
+  <div class="container d-flex justify-content-center align-items-center">
+    <p class="text-black mb-0"> &copy; 2023 All Rights Reserved</p>
+  </div>
+</footer> -->
+

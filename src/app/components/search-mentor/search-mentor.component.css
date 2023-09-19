@@ -1,0 +1,112 @@
+
+.custom-navbar {
+  background-color: #cfe2ff;
+}
+
+.custom-navbar-nav{
+  margin-left: auto;
+}
+
+.btn.btn-light:hover {
+  background-color: rgb(155, 187, 238) ; /* Change the background color as needed */
+}
+
+.custom-footer{
+  background-color: #cfe2ff;
+}
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.background-container {
+  background-image: url('\src\assets\Mentorship.jpg'); 
+ /* background-size: cover;  Adjust the background-size property as needed */
+  opacity: 0.60; 
+  position: absolute;
+  top: -15px;
+  left: 68;
+  width: 90%;
+  height: 100%;
+  z-index: -1; /* This places the background container behind the content */
+}
+
+.content-container{
+  min-height: calc(100vh - 10px - 50px);
+  display: flex;
+  flex-direction: column;
+  /* background-color: #f0f0f0;*/
+} 
+
+.custom-content-container{
+  max-width: 590px;
+  flex-grow: 1;
+}
+
+/* Styles for the container */
+.title-text {
+  max-width: 480px;
+  align-items: center;
+  margin-top: 100px; /* Adjust as needed */
+  font-family: 'Inter', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #090957;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: inherit;
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent line breaks */
+  border-right: 3px solid transparent; /* Create a blinking cursor effect */
+  animation: typing 4s steps(40, end)2s infinite, blink-caret 0.75s;
+  /* Adjust the duration and steps as needed */
+}
+
+/* Define the typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #090957; /*Change cursor color as needed*/
+  }
+} 
+
+/* @keyframes pause {
+  0%, 100% {
+    width: 100%;
+  }
+  50% {
+    width: 100%;
+  }
+} */
+
+/* Styling for the search box */
+.search-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; 
+}
+
+.custom-search-input{
+  width: 400px;
+}
+/* Styling for the search button */
+.btn-search {
+  background-color: #090957;
+  color: white;
+}
+
+.btn-search:hover{
+    background-color: blue; /* Change the background color as needed */
+  }
+

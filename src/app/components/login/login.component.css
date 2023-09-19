@@ -1,0 +1,81 @@
+/* Add Bootstrap styles to your form elements */
+.active {
+  background-color: rgba(37, 23, 234, 0.872);
+}
+
+
+
+/* Center the form on the page */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style form elements */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Style the form inputs */
+  .form-control {
+    width: 100%;
+  }
+  
+  /* Style the submit button */
+  .btn-primary {
+    width: 22%;
+  }
+
+  .btn-signin{
+    padding-left: 73%;
+  }
+  .color-bar {
+    background-color: #cfe2ff; /* You can change the background color */
+    height: 40px; /* Adjust the height as needed */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+  .div1{
+    margin-top: 20px;
+  }
+  #signUp{
+    margin-left: 10px;
+  }
+  
+  /* Style the reCAPTCHA widget */
+  .g-recaptcha {
+    margin: 10px 0;
+  }
+  
+  /* Add custom styles if needed */
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 576px) {
+    /* Adjust form styles for small screens */
+    .form-container {
+      padding: 20px;
+    }
+  }
+  .custom-navbar  {
+    background-color: #cfe2ff;
+    height: 50px;
+  }
+  .custom-navbar-nav{
+    margin-left: auto;
+  }
+
+  .custom-footer{
+    background-color: #cfe2ff;
+    height: 50px;
+  }
+
+  .custom-A{
+    border: 2px solid rgb(200, 197, 197);
+    /* border-radius: 50%; */
+  }
+  

@@ -1,0 +1,156 @@
+
+.custom-navbar {
+  background-color: #cfe2ff;
+}
+
+.custom-navbar-nav{
+  margin-left: auto;
+}
+
+.btn.btn-light:hover {
+  background-color: rgb(155, 187, 238) ; /* Change the background color as needed */
+}
+
+.custom-footer{
+  background-color: #cfe2ff;
+}
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+
+.border-line {
+  --tw-border-opacity: 1!important;
+  border-color: rgb(229, 231, 235, var(--tw-border-opacity))!important;
+  border-style: solid!important;
+  border-bottom-width: 1px!important;
+}
+
+.example-button-row.custom-fab-button {
+  display: flex;
+  flex-direction: column; /* Display buttons vertically */
+  align-items: flex-start;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row; /* Display buttons horizontally within the group */
+  align-items: center;
+}
+
+.reset-button {
+  margin-top: 10px; /* Adjust the margin as needed to control the spacing */
+}
+
+.custom-fab-button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: white;
+  color: black; 
+  padding: 10px 20px; 
+}
+
+.custom-button {
+  font-size: 13px; 
+  padding: 8px 16px; 
+  border: none; 
+  outline: none; 
+  cursor: pointer;
+}
+
+.circular-frame {
+  width: 250px; /* Adjust the width and height to your desired size */
+  height: 250px;
+  border-radius: 50%; /* Makes it a circle */
+  overflow: hidden; /* Clips anything outside the circle */
+  /* You can add additional styling here, such as border, shadow, etc. */
+}
+
+.circular-frame img {
+  width: 100%; /* Make sure the image fills the circular frame */
+  height: 100%;
+  object-fit: cover; /* Adjust to your preference */
+}
+
+/* Center the mat-card on the page */
+.Mentor-card {
+  width: 80%; /* Adjust this value to change the card's width as needed */
+  margin: 0 auto; /* Centers the card horizontally */
+  display: block;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(209, 213, 219, 1);
+  padding: 1.25rem;
+}
+
+/* Define the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1rem;
+  align-items: center;
+}
+
+/* Style the image column */
+.grid-image img {
+  max-width: 100%;
+}
+
+/* Style the badge container */
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Style the button */
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-title{
+  font-weight: bold;
+}
+mat-card-subtitle{
+  color: rgb(20, 20, 20);
+  margin-bottom: 10px;
+}
+
+.view-profile-button {
+  background-color: #183770;
+  color: white !important;
+  font-size: 14px;
+  width: 160px;
+}
+
+.line {
+  height: 1px;
+  background-color: rgb(219 221 223);
+  margin: 0.5rem 0;
+}
+
+.matcard-custom-content p{
+  font-size: smaller;
+  margin-bottom: 0.2rem;
+}
+
+.Mentorship-plan-button{
+  background-color: #183770;
+  color: white !important;
+  font-size: 14px;
+  width: 200px;
+}
+
+.icon-and-content{
+  display: flex;
+  align-items: center;
+  color: teal;
+}
+
+.icon-and-content .mat-icon{
+  font-size: 20px;
+  color: teal;
+}

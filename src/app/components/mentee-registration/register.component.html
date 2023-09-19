@@ -1,0 +1,75 @@
+<nav class="navbar navbar-light" style="background-color: #7bc7fd; height: 40px;">
+  <div class="d-flex justify-content-center align-items-center w-100">
+      <div class="ms-auto me-3"> <!-- Use ms-auto to push the button to the right -->
+          <a href="home">
+              <button class="btn btn-sm btn-light btn-block" style="width: 100px;">Home</button>
+          </a>
+      </div>
+  </div>
+</nav>
+<div class="div1">
+    <span class="btn-signin">Already have an account?</span>
+    <button class="btn btn-outline-primary ml-2" id="signIn" routerLink='/login'>Sign In</button>
+</div>
+<div class="container">
+    <!-- <div class="row justify-content-center"> -->
+    
+        <h1 class="heading-1 mb-8">Sign up as a mentee</h1>
+        <p>Are you looking to become a <a routerLink='/mentor-registration'> mentor instead? </a></p>
+    
+    <div class="col-md-6" >
+        <form [formGroup]="registerform" (ngSubmit)="onSubmit()" novalidate>
+          
+            <div class="form-group">
+                <label class="inline-block text-sm font-medium text-gray-700 mb-1">Employee Id</label>
+                <input type="number" class="form-control" id="employeeid" formControlName="employeeId">
+                <div *ngIf="registerform.get('employeeId')?.hasError('required') && (registerform.get('employeeId')?.touched || registerform.get('employeeId')?.dirty)" class="text-danger">Employee ID is required.</div>
+              </div>
+              
+              <div class="form-group">
+                <label class="inline-block text-sm font-medium text-gray-700 mb-1">First name</label>
+                <input type="text" class="form-control" id="firstname" formControlName="firstName">
+                <div *ngIf="registerform.get('firstName')?.hasError('required') && (registerform.get('firstName')?.touched || registerform.get('firstName')?.dirty)" class="text-danger">First name is required.</div>
+              </div>
+            <div class="form-group">
+                <label class="inline-block text-sm font-medium text-gray-700 mb-1">Last name</label>
+                <input type="lastname" class="form-control" id="lastname"  formControlName="lastName">
+                <div *ngIf="registerform.get('lastName')?.hasError('required') && (registerform.get('lastName')?.touched || registerform.get('lastName')?.dirty)" class="text-danger">Last name is required.</div>
+            </div>
+            <div class="form-group">
+                <label class="inline-block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" class="form-control" id="email"  formControlName="email">
+                <div *ngIf="registerform.get('email')?.hasError('required') && (registerform.get('email')?.touched || registerform.get('email')?.dirty)" class="text-danger">Email is required.</div>
+              
+            </div>
+            <div class="form-group">
+                <label class="inline-block text-sm font-medium text-gray-700 mb-1">Password</label>
+                <input type="password" class="form-control" id="password" formControlName="password">
+                <div *ngIf="registerform.get('password')?.hasError('required') && (registerform.get('password')?.touched || registerform.get('password')?.dirty)"
+                  class="text-danger">required.</div>
+              </div>
+              
+              <div class="form-group">
+                <label class="inline-block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmpassword" formControlName="confirmPassword">
+                <div *ngIf="registerform.get('confirmPassword')?.hasError('required') && (registerform.get('confirmPassword')?.touched || registerform.get('confirmPassword')?.dirty)"
+                  class="text-danger">required.</div>
+                <div *ngIf="registerform.hasError('passwordMismatch') && (registerform.get('confirmPassword')?.touched || registerform.get('confirmPassword')?.dirty)"
+                  class="text-danger">Passwords do not match.</div>
+              </div>
+              <button type="submit" class="btn btn-primary " >Sign Up</button>
+            <!-- <button type="submit" >submit</button> -->
+        </form>
+    </div>
+    
+</div>
+<footer>
+<div class="mt-2">
+  <nav class="navbar navbar-light" style="background-color: #7bc7fd; height: 40px;">
+    <div class="d-flex justify-content-center align-items-center w-100 ">
+      <p class="text-black mb-0"> &copy; 2023 All Rights Reserved</p>
+    </div>
+  </nav>
+</div>
+</footer>
+<!-- <router-outlet></router-outlet> -->
